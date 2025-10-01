@@ -1,4 +1,5 @@
-
+@extends('layouts.app')
+@section('content')
 @include('pages.landingPage.hotJobs')
 @include('pages.landingPage.purchase-nav')
 @include('pages.landingPage.featuredJob')

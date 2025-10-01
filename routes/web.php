@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ProfileController;
@@ -15,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('index');
+    return view('pages.landingPage');
 });
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact.page');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,22 +34,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
- // creating resource controller for the roles
- Route::resource('roles',RoleController::class);
+    // creating resource controller for the roles
+    Route::resource('roles', RoleController::class);
 
- 
 
-//permissions contoller 
-    Route::get('/permissions',[PermissionController::class,'index'])->name('permissions.index');
+
+    //permissions contoller 
+    Route::get('/permissions', [PermissionController::class, 'index'])->name('permissions.index');
     Route::get('/permissions/create', [PermissionController::class, 'create'])->name('permissions.create');
-    Route::delete('/permissions/{id}',[PermissionController::class, 'destroy'])->name('permissions.destroy');
+    Route::delete('/permissions/{id}', [PermissionController::class, 'destroy'])->name('permissions.destroy');
     Route::post('/permissions', [PermissionController::class, 'store'])->name('permissions.store');
-    Route::get('/permissions/edit/{id}',[PermissionController::class, 'edit'])->name('permissions.edit');
-    Route::post('/permissions/update/{id}',[PermissionController::class, 'update'])->name('permissions.update');
-
-
-   
-
+    Route::get('/permissions/edit/{id}', [PermissionController::class, 'edit'])->name('permissions.edit');
+    Route::post('/permissions/update/{id}', [PermissionController::class, 'update'])->name('permissions.update');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

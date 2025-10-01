@@ -341,7 +341,8 @@
                         <i class="ti-location-pin"></i>
                       </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                     
+                    <div class="col-md-3 col-sm-6"> 
                       <div class="search-category-container">
                         <label class="styled-select">
                           <select class="dropdown-product selectpicker">
@@ -357,7 +358,7 @@
                           </select>
                         </label>
                       </div>
-                    </div>
+                    </div> 
                     <div class="col-md-1 col-sm-6">
                       <button type="button" class="btn btn-search-icon"><i class="ti-search"></i></button>
                     </div>
@@ -376,4 +377,4 @@
       </div>
     </section>
     <!-- end intro section -->
-    </div>
+    </div>  
