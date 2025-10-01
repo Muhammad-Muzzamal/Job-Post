@@ -1,36 +1,55 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/material-kit.css" type="text/css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+    <link rel="stylesheet" href="assets/extras/animate.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/settings.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/slicknav.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colors/red.css" media="screen" />
+</head>
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+<body>
+        @include('partials.header')
+        @yield('content')
+        @include('partials.footer')
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
+        <!-- Main JS  -->
+        <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/material.min.js"></script>
+        <script type="text/javascript" src="assets/js/material-kit.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+        <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+        <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="assets/js/form-validator.min.js"></script>
+        <script type="text/javascript" src="assets/js/contact-form-script.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+
+</body>
+
 </html>
