@@ -68,10 +68,10 @@
       <!-- Hamburger Toggle BTN -->
 
       <a href="index.html" class="lg:hidden">
-        <img class="dark:hidden" src="./images/logo/logo.svg" alt="Logo" />
+        <img class="dark:hidden" src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}" alt="Logo" />
         <img
           class="hidden dark:block"
-          src="./images/logo/logo-dark.svg"
+         src="{{ asset('dashboardAssets/images/logo/logo-dark.svg')}}"
           alt="Logo"
         />
       </a>
@@ -261,7 +261,7 @@
                     class="relative z-1 block h-10 w-full max-w-10 rounded-full"
                   >
                     <img
-                      src="./images/user/user-02.jpg"
+                      src="{{assets('dashboardAsstes/images/user/user-02.jpg"
                       alt="User"
                       class="overflow-hidden rounded-full"
                     />
