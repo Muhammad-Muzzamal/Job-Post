@@ -2,7 +2,7 @@
         <div class="header-banner">
           <nav class="navbar navbar-default main-navigation" role="navigation" data-spy="affix" data-offset-top="50">
             <div class="container">
-              <!-- Brand and toggle get grouped for better mobile display -->
+              <!-- Brand and toggle get grouped for better mobile display -->a
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                   <span class="sr-only">Toggle navigation</span>

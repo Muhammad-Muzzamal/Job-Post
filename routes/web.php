@@ -18,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('pages.landingPage');
+    return view('layouts.app');
 });
 
-Route::get('/ramzan', function(){
+Route::get('/ramzan', function () {
     return view('pages.dashboard.app');
 });
 

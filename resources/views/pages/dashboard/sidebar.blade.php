@@ -1,6 +1,10 @@
 <aside
   :class="sidebarToggle ? 'translate-x-0 lg:w-[90px]' : '-translate-x-full'"
-  class="sidebar fixed left-0 top-0 z-9999 flex h-screen w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 duration-300 ease-linear dark:border-gray-800 dark:bg-black lg:static lg:translate-x-0"
+  class="sidebar fixed left-0 top-0 z-9999 flex h-screen w-[290px] flex-col overflow-y-hidden 
+         border-r border-gray-200 bg-white text-gray-800 
+         px-5 duration-300 ease-linear 
+          dark:bg-white dark:text-gray-800 
+         lg:static lg:translate-x-0"
   @click.outside="sidebarToggle = false"
 >
   <!-- SIDEBAR HEADER -->
@@ -8,30 +12,23 @@
     :class="sidebarToggle ? 'justify-center' : 'justify-between'"
     class="sidebar-header flex items-center gap-2 pb-7 pt-8"
   >
-    <a href="index.html">
+    <a href="index.html" class="flex items-center gap-2">
       <span class="logo" :class="sidebarToggle ? 'hidden' : ''">
-        <img class="dark:hidden" src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}" alt="Logo" />
-        <img
-          class="hidden dark:block"
-          src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}"
-          alt="Logo"
-          
-        />
+        <img class="dark:hidden " src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}" alt="Logo" />
+        <img class="hidden dark:block " src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}" alt="Logo" />
       </span>
 
       <img
         class="logo-icon"
         :class="sidebarToggle ? 'lg:block' : 'hidden'"
-       src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}"
-        alt="Logo"
+        src="{{ asset('dashboardAssets/images/logo/logo2.jpg')}}"
+        alt="Logo"  
       />
     </a>
   </div>
   <!-- SIDEBAR HEADER -->
 
-  <div
-    class="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear"
-  >
+  <div class="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
     <!-- Sidebar Menu -->
     <nav x-data="{selected: $persist('Dashboard')}">
       <!-- Menu Group -->
